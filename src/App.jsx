@@ -14,7 +14,7 @@ import Angular from "./components/angular.jsx";
 
 const App = () => {
   return (
-      <BrowserRouter>
+      <BrowserRouter basename='/project_3D_developer_portfolio'>
         <div className='relative z-0 bg-primary'>
           <Routes>
             {/* Route par défaut pour la page d'accueil */}
