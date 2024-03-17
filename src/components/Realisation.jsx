@@ -27,7 +27,7 @@ const ProjectCard = ({
               window.scrollTo(0, 0);
           }}
       >
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+
       <Tilt
         options={{
           max: 45,
@@ -78,7 +78,7 @@ const ProjectCard = ({
           </div>
 
       </Tilt>
-    </motion.div>
+
       </Link>
   );
 };
@@ -86,20 +86,17 @@ const ProjectCard = ({
 const Realisation = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText} `}>Mes Réalisations</p>
         <h2 className={`${styles.sectionHeadText}`}>Projets.</h2>
-      </motion.div>
 
       <div className='w-full flex'>
-        <motion.p
-          variants={fadeIn("", "", 0.1, 1)}
+        <p
           className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'>
             Les projets suivants mettent en avant mes compétences et mon expérience à travers des exemples concrets de mon travail. Chaque projet est brièvement décrit, accompagné de liens vers le détail du projet.
 
             <p className={'text-[14px] font-extralight font'}> <span className={'text-red-600'}>* </span>Les tags, précédés du signe "#", situés sous les cartes, regroupent les compétences techniques et transversales utilisées pour mener à bien le projet en question.</p>
 
-        </motion.p>
+        </p>
       </div>
 
       <div className='mt-20 flex flex-wrap gap-7'>
