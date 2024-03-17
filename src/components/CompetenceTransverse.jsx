@@ -7,72 +7,46 @@ import { github } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
+import {Link} from "react-router-dom";
 
-const ProjectCard = ({
-  index,
-  name,
-  description,
-  tags,
-  image,
-  source_code_link,
-}) => {
-  return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
-      <Tilt
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
-      >
-        <div className='relative w-full h-[230px]'>
-          <img
-            src={image}
-            alt='project_image'
-            className='w-full h-full object-cover rounded-2xl'
-          />
+const ServiceCard = ({ index, title}) => (
 
-          <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
-            <div
-              onClick={() => window.open(source_code_link, "_blank")}
-              className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
+    <Tilt className='xs:w-[250px] w-full'>
+        <motion.div
+            variants={fadeIn("right", "spring", index * 0.5, 0.75)}
+            className='w-full green-pink-gradient p-[2px] rounded-[20px] shadow-card'
+        >
+            <Link
+                to={"source_code_link"}
+                onClick={() => {
+                    setActive("");
+                    window.scrollTo(0, 0);
+                }}
             >
-              <img
-                src={github}
-                alt='source code'
-                className='w-1/2 h-1/2 object-contain'
-              />
-            </div>
-          </div>
-        </div>
+                <div
+                    options={{
+                        max: 45,
+                        scale: 1,
+                        speed: 450,
+                    }}
+                    className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[100] flex justify-evenly items-center flex-col'
+                >
 
-        <div className='mt-5'>
-          <h3 className='text-white font-bold text-[24px]'>{name}</h3>
-          <p className='mt-2 text-secondary text-[14px]'>{description}</p>
-        </div>
+                    <h3 className='text-white text-[20px] font-bold text-center'>
+                        {title}
+                    </h3>
+                </div>
+            </Link>
+        </motion.div>
+    </Tilt>
 
-        <div className='mt-4 flex flex-wrap gap-2'>
-          {tags.map((tag) => (
-            <p
-              key={`${name}-${tag.name}`}
-              className={`text-[14px] ${tag.color}`}
-            >
-              #{tag.name}
-            </p>
-          ))}
-        </div>
-      </Tilt>
-    </motion.div>
-  );
-};
+);
 
-const Technique = () => {
+const Transverse = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} `}>Compétences Techniques</p>
-        <h2 className={`${styles.sectionHeadText}`}>Compétences.</h2>
+        <p className={`${styles.sectionSubText} md:text-[40px] text-amber-50`}>Compétences Transverse</p>
       </motion.div>
 
       <div className='w-full flex'>
@@ -89,12 +63,15 @@ const Technique = () => {
       </div>
 
       <div className='mt-20 flex flex-wrap gap-7'>
-        {projects.map((project, index) => (
-          <ProjectCard key={`project-${index}`} index={index} {...project} />
-        ))}
+          <ServiceCard title={"#Analyse du besoin client"}></ServiceCard>
+          <ServiceCard title={"#Agilité"}></ServiceCard>
+          <ServiceCard title={"#Communication"}></ServiceCard>
+          <ServiceCard title={"#Auto-formation"}></ServiceCard>
+          <ServiceCard title={"#Conformité Légale"}></ServiceCard>
+          <ServiceCard title={"#Analyse du retour sur investissement"}></ServiceCard>
       </div>
     </>
   );
 };
 
-export default SectionWrapper(Technique, "technique");
+export default SectionWrapper(Transverse, "transverse");

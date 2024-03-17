@@ -7,7 +7,7 @@ import { fadeIn, textVariant } from "../utils/motion";
 import NavbarReturn from "./NavbarReturn.jsx";
 import {Link} from "react-router-dom";
 import Tilt from "react-tilt";
-import {projectsInJava} from "../constants/index.js";
+import {projectsInAngular} from "../constants/index.js";
 
 
 const ProjectCard = ({
@@ -18,7 +18,6 @@ const ProjectCard = ({
                          tagsTransverse,
                          image,
                          source_code_link,
-                         taille,
                      }) => {
     return (
         <Link
@@ -86,13 +85,13 @@ const ProjectCard = ({
 };
 
 
-const Java = () => {
+const Angular = () => {
     return (
         <>
             <NavbarReturn />
             <motion.div variants={textVariant()}>
                 <p className={styles.sectionSubText}>Compétence Technique :</p>
-                <h2 className={styles.sectionHeadText}>Java.</h2>
+                <h2 className={styles.sectionHeadText}>Angular.</h2>
             </motion.div>
 
             <motion.div
@@ -100,37 +99,28 @@ const Java = () => {
                 className='mt-4 text-secondary text-[17px] leading-[30px]'
             >
                 <p>
-                    Java, un langage clé pour le développement d'applications solides, il a été un élément essentiel de ma formation en informatique. Ma maîtrise de Java s'est étendue à travers plusieurs projets variés, allant des systèmes internes aux applications grand public.
+                    Angular est un framework structurant pour le développement de front-end qui a été essentiel dans la création d'interfaces utilisateur interactives et performantes dans mes projets.
                 </p>
-
-                <br/>
-                <p className='mt-4  '>
-                    <strong className={"text-[26px]"}>Tableaux de bord d'indicateurs</strong> - <Link to="/tableauIndicateur" className="text-amber-50">Voir le projet</Link><br/>
-                    J'ai utilisé Java pour traiter et analyser les données critiques des patients à risque. Cela a permis de garantir la précision et la sécurité nécessaires dans le domaine de la santé.
-                </p>
-                <br/>
 
                 <p className='mt-4'>
-                    <strong className={"text-[26px]"}>Mindset, Application de rencontre à l'aveugle</strong> - <Link to="/mindset" className="text-amber-50">Voir le projet</Link><br/>
-                    Java a été utilisé pour créer une backend robuste pour Mindset, en gérant les données utilisateur, en mettant en œuvre des fonctionnalités de matching et en facilitant la communication entre le client et le serveur.
+                    <strong>Tableaux de bord d'indicateurs</strong> - <Link to="/projects/indicators-dashboard" className="text-amber-50">Voir le projet</Link><br/>
+                    Utilisant Angular, j'ai construit des interfaces réactives pour les tableaux de bord médicaux, permettant une visualisation et une interaction fluides avec les données en temps réel pour les professionnels de la santé.
                 </p>
-                <br/>
 
                 <p className='mt-4'>
-                    <strong className={"text-[26px]"}>Logiciel de gestion de santé Orbis</strong> - <Link to="/orbisProject" className="text-amber-50">Voir le projet</Link><br/>
-                    Mon expérience avec Orbis a mis l'accent sur l'utilisation de Java pour développer des solutions critiques de gestion de santé. J'ai travaillé sur l'intégration de modules, l'amélioration de la performance du système et l'ajout de nouvelles fonctionnalités qui ont contribué à moderniser les processus hospitaliers.
+                    <strong>Orbis - Logiciel de gestion de santé pour hôpitaux</strong> - <Link to="/projects/orbis-healthcare" className="text-amber-50">Voir le projet</Link><br/>
+                    J'ai utilisé Angular pour créer des composants modulaires et des services injectables, ce qui a permis d'obtenir un système de gestion de santé hautement évolutif et maintenable au sein de l'architecture Orbis.
                 </p>
-                <br/>
 
                 <p className='mt-4'>
-                    En somme, Java a été un allié incontournable dans mon parcours de développeur. Il m'a permis d'aborder avec assurance des domaines variés, de la santé à la rencontre en ligne, tout en renforçant mes compétences en logique de programmation, en conception de systèmes et en gestion de données.
+                    Ces applications de Angular démontrent sa puissance et sa flexibilité, et reflètent mon engagement à construire des solutions front-end de haute qualité qui sont non seulement fonctionnelles, mais aussi esthétiquement plaisantes.
                 </p>
             </motion.div>
 
-                <p className="sm:text-[23px] font-bold mt-20 text-secondary uppercase tracking-wider">Mes projets Java :</p>
+                <p className="sm:text-[23px] font-bold mt-20 text-secondary uppercase tracking-wider">Mes projets Angular :</p>
 
             <div className='mt-10 flex flex-wrap gap-7'>
-                {projectsInJava.map((project, index) => (
+                {projectsInAngular.map((project, index) => (
                     <ProjectCard key={`project-${index}`} index={index} {...project} />
                 ))}
             </div>
@@ -138,4 +128,4 @@ const Java = () => {
     );
 };
 
-export default SectionWrapper(Java, "java");
+export default SectionWrapper(Angular, "angular");

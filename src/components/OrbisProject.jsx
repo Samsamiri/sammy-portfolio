@@ -41,13 +41,13 @@ const ServiceCard = ({ index, title}) => (
 
 );
 
-const Mindset = () => {
+const OrbisProject = () => {
   return (
     <>
         <NavbarReturn/>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>Projet Personnel :</p>
-        <h2 className={styles.sectionHeadText}>Mindset - Application de rencontre à l'aveugle.</h2>
+        <p className={styles.sectionSubText}>DEDALUS HEALTHCARE FRANCE :</p>
+        <h2 className={styles.sectionHeadText}>Orbis - Logiciel de gestion de santé pour hôpitaux.</h2>
       </motion.div>
 
         <motion.div
@@ -56,25 +56,27 @@ const Mindset = () => {
         >
             <br/><br/>
 
-            Mindset est une application de rencontre innovante que j'ai développée en tant que projet personnel. L'application vise à créer des liens authentiques en privilégiant la personnalité et les valeurs partagées plutôt que l'apparence physique. Elle offre une expérience unique où les photos de profil ne sont révélées que petit à petit après discussion entre les utilisateurs.
+            Dans le cadre de mon alternance, j'ai intégré le projet Orbis, un système de gestion de la santé élaboré pour les hôpitaux et cliniques d'envergure. Ma contribution s'est focalisée sur l'amélioration de fonctionnalités existantes et le développement de nouvelles capacités au sein de l'équipe dédiée à la pharmacie, ainsi qu'à la correction de bugs remontés par les clients renforçant ainsi l'efficacité et la performance du logiciel.
 
             <br/><br/>
 
-            Pour mener ce projet à bien, j'ai mobilisé mes compétences en :
-            <span className={'text-[20px] text-amber-50'}> #Flutter </span> et
-            <span className={'text-[20px] text-amber-50'}> #Dart </span> pour le développement cross-platform, assurant ainsi une expérience utilisateur fluide sur tous les appareils. J'ai également utilisé
-            <span className={'text-[20px] text-amber-50'}> #JAVA </span> et des techniques de
-            <span className={'text-[20px] text-amber-50'}> #Maquettage WebMaquettage Web </span> pour construire le backend et concevoir l'interface utilisateur.
+            Au cœur de ce projet, mes compétences techniques ont été mises à l'épreuve, notamment avec :
+            <span className={'text-[20px] text-amber-50'}> #HTML </span>,
+            <span className={'text-[20px] text-amber-50'}> #CSS </span>,
+            <span className={'text-[20px] text-amber-50'}> #Angular </span>, et
+            <span className={'text-[20px] text-amber-50'}> #JAVA </span>.
+            Ces outils ont été essentiels pour développer une interface utilisateur fonctionnelle et pour garantir la fiabilité du backend.
 
             <br/><br/>
 
-            Ce projet a également fait appel à mes compétences transverses :
-            <span className={'text-[20px] text-amber-50'}> #Analyse du besoin client</span>,
-            <span className={'text-[20px] text-amber-50'}> #Agilité</span>,
-            <span className={'text-[20px] text-amber-50'}> #Communication</span>,
-            <span className={'text-[20px] text-amber-50'}> #Auto-formation</span>,
-            <span className={'text-[20px] text-amber-50'}> #Conformité Légale</span>, et
-            <span className={'text-[20px] text-amber-50'}> #Analyse du retour sur investissement</span>, qui ont été cruciales pour répondre efficacement aux besoins des utilisateurs et garantir la conformité du produit.
+            Les compétences transversales telles que :
+            <span className={'text-[20px] text-amber-50'}> #Analyse du besoin client </span>,
+            <span className={'text-[20px] text-amber-50'}> #Agilité </span>,
+            <span className={'text-[20px] text-amber-50'}> #Communication </span>,
+            <span className={'text-[20px] text-amber-50'}> #Auto-formation </span>,
+            <span className={'text-[20px] text-amber-50'}> #Conformité Légale </span>, et
+            <span className={'text-[20px] text-amber-50'}> #Analyse du retour sur investissement </span>,
+            ont également joué un rôle clé dans la collaboration avec l'équipe de développement et dans la compréhension approfondie des exigences du domaine médical.
 
         </motion.div>
 
@@ -100,4 +102,4 @@ const Mindset = () => {
   );
 };
 
-export default SectionWrapper(Mindset, "mindset");
+export default SectionWrapper(OrbisProject, "orbisProject");

@@ -38,16 +38,15 @@ const ServiceCard = ({ index, title}) => (
         </Link>
     </motion.div>
   </Tilt>
-
 );
 
-const Mindset = () => {
+const TableauIndicateur = () => {
   return (
     <>
         <NavbarReturn/>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>Projet Personnel :</p>
-        <h2 className={styles.sectionHeadText}>Mindset - Application de rencontre à l'aveugle.</h2>
+        <p className={styles.sectionSubText}>Dedalus Healthcare France :</p>
+        <h2 className={styles.sectionHeadText}> Tableaux de bord d'indicateurs pour la surveillance de patients à risque.</h2>
       </motion.div>
 
         <motion.div
@@ -56,34 +55,35 @@ const Mindset = () => {
         >
             <br/><br/>
 
-            Mindset est une application de rencontre innovante que j'ai développée en tant que projet personnel. L'application vise à créer des liens authentiques en privilégiant la personnalité et les valeurs partagées plutôt que l'apparence physique. Elle offre une expérience unique où les photos de profil ne sont révélées que petit à petit après discussion entre les utilisateurs.
+            Dans le cadre de ce projet d'entreprise, j'ai développé un tableau de bord d'indicateurs visant à améliorer la surveillance des patients à risque en milieu hospitalier. Cet outil a été conçu pour permettre au personnel soignant de suivre efficacement et en temps réel des données critiques, améliorant la réactivité face aux urgences médicales.
 
             <br/><br/>
 
-            Pour mener ce projet à bien, j'ai mobilisé mes compétences en :
-            <span className={'text-[20px] text-amber-50'}> #Flutter </span> et
-            <span className={'text-[20px] text-amber-50'}> #Dart </span> pour le développement cross-platform, assurant ainsi une expérience utilisateur fluide sur tous les appareils. J'ai également utilisé
-            <span className={'text-[20px] text-amber-50'}> #JAVA </span> et des techniques de
-            <span className={'text-[20px] text-amber-50'}> #Maquettage WebMaquettage Web </span> pour construire le backend et concevoir l'interface utilisateur.
+            J'ai mis à profit mes compétences en :
+            <span className={'text-[20px] text-amber-50'}> #Angular </span>,
+            <span className={'text-[20px] text-amber-50'}> #HTML </span>,
+            <span className={'text-[20px] text-amber-50'}> #JAVA </span>, et
+            <span className={'text-[20px] text-amber-50'}> #Maquettage Web </span>
+            pour réaliser l'interface utilisateur et le backend de l'application. La stylisation a été effectuée avec
+            <span className={'text-[20px] text-amber-50'}> #CSS </span>, garantissant une expérience utilisateur cohérente et intuitive.
 
             <br/><br/>
 
-            Ce projet a également fait appel à mes compétences transverses :
-            <span className={'text-[20px] text-amber-50'}> #Analyse du besoin client</span>,
-            <span className={'text-[20px] text-amber-50'}> #Agilité</span>,
-            <span className={'text-[20px] text-amber-50'}> #Communication</span>,
-            <span className={'text-[20px] text-amber-50'}> #Auto-formation</span>,
-            <span className={'text-[20px] text-amber-50'}> #Conformité Légale</span>, et
-            <span className={'text-[20px] text-amber-50'}> #Analyse du retour sur investissement</span>, qui ont été cruciales pour répondre efficacement aux besoins des utilisateurs et garantir la conformité du produit.
-
+            Mon travail a également bénéficié de compétences transversales telles que :
+            <span className={'text-[20px] text-amber-50'}> #Agilité </span>,
+            <span className={'text-[20px] text-amber-50'}> #Analyse du besoin client </span>, et
+            <span className={'text-[20px] text-amber-50'}> #Communication </span>,
+            qui ont été essentielles pour adapter l'outil aux exigences spécifiques du milieu hospitalier et pour communiquer efficacement avec les parties prenantes.
         </motion.div>
 
       <p className={styles.sectionSubText2 } >Compétences Techniques :</p>
 
       <div className='mt-6 flex flex-wrap gap-5'>
-        <ServiceCard title={"#Flutter"}></ServiceCard>
-        <ServiceCard title={"#Dart"}></ServiceCard>
+        <ServiceCard title={"#Angular"}></ServiceCard>
+        <ServiceCard title={"#Maquettage Web"}></ServiceCard>
         <ServiceCard title={"#JAVA"}></ServiceCard>
+        <ServiceCard title={"#HTML"}></ServiceCard>
+        <ServiceCard title={"#CSS"}></ServiceCard>
       </div>
 
         <p className={styles.sectionSubText2 } >Compétences Transverses :</p>
@@ -100,4 +100,4 @@ const Mindset = () => {
   );
 };
 
-export default SectionWrapper(Mindset, "mindset");
+export default SectionWrapper(TableauIndicateur, "tableauIndicateur");

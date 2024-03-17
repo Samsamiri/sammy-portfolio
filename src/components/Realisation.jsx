@@ -3,20 +3,30 @@ import Tilt from "react-tilt";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
-import { github } from "../assets";
+import {close, github} from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
+import {Link} from "react-router-dom";
 
 const ProjectCard = ({
   index,
   name,
   description,
-  tags,
+  tagsTechnique,
+  tagsTransverse,
   image,
   source_code_link,
 }) => {
   return (
+      <Link
+          to={source_code_link}
+          className='flex gap-2'
+          onClick={() => {
+              setActive("");
+              window.scrollTo(0, 0);
+          }}
+      >
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <Tilt
         options={{
@@ -32,19 +42,6 @@ const ProjectCard = ({
             alt='project_image'
             className='w-full h-full object-cover rounded-2xl'
           />
-
-          <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
-            <div
-              onClick={() => window.open(source_code_link, "_blank")}
-              className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
-            >
-              <img
-                src={github}
-                alt='source code'
-                className='w-1/2 h-1/2 object-contain'
-              />
-            </div>
-          </div>
         </div>
 
         <div className='mt-5'>
@@ -52,8 +49,11 @@ const ProjectCard = ({
           <p className='mt-2 text-secondary text-[14px]'>{description}</p>
         </div>
 
-        <div className='mt-4 flex flex-wrap gap-2'>
-          {tags.map((tag) => (
+          <br/>
+
+          <p className={'text-sm'}>Compétences techniques :</p>
+        <div className=' flex flex-wrap gap-2'>
+          {tagsTechnique.map((tag) => (
             <p
               key={`${name}-${tag.name}`}
               className={`text-[14px] ${tag.color}`}
@@ -62,12 +62,28 @@ const ProjectCard = ({
             </p>
           ))}
         </div>
+
+          <br/>
+
+          <p className={'text-sm'}>Compétences transverses :</p>
+          <div className='flex flex-wrap gap-2 '>
+              {tagsTransverse.map((tag) => (
+                  <p
+                      key={`${name}-${tag.name}`}
+                      className={`text-[14px] ${tag.color}`}
+                  >
+                      #{tag.name}
+                  </p>
+              ))}
+          </div>
+
       </Tilt>
     </motion.div>
+      </Link>
   );
 };
 
-const Works = () => {
+const Realisation = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
@@ -78,13 +94,11 @@ const Works = () => {
       <div className='w-full flex'>
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
-          className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
-        >
-          Following projects showcases my skills and experience through
-          real-world examples of my work. Each project is briefly described with
-          links to code repositories and live demos in it. It reflects my
-          ability to solve complex problems, work with different technologies,
-          and manage projects effectively.
+          className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'>
+            Les projets suivants mettent en avant mes compétences et mon expérience à travers des exemples concrets de mon travail. Chaque projet est brièvement décrit, accompagné de liens vers le détail du projet.
+
+            <p className={'text-[14px] font-extralight font'}> <span className={'text-red-600'}>* </span>Les tags, précédés du signe "#", situés sous les cartes, regroupent les compétences techniques et transversales utilisées pour mener à bien le projet en question.</p>
+
         </motion.p>
       </div>
 
@@ -97,4 +111,4 @@ const Works = () => {
   );
 };
 
-export default SectionWrapper(Works, "realisation");
+export default SectionWrapper(Realisation, "realisation");

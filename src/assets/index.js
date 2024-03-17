@@ -17,18 +17,26 @@ import mongodb from "./tech/mongodb.png";
 import nodejs from "./tech/nodejs.png";
 import reactjs from "./tech/reactjs.png";
 import redux from "./tech/redux.png";
+import angular from "./tech/angular.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
+import java from "./tech/java.png";
+import mysql from "./tech/mysql.png";
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
+import dedalus from "./company/dedalus.png";
 import tesla from "./company/tesla.png";
+import darty from "./company/darty.png";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+
+import egytronics from "./projets/egytronics.png"
+import mindset from "./projets/mindset.png"
 
 export {
   logo,
@@ -59,4 +67,11 @@ export {
   carrent,
   jobit,
   tripguide,
+  dedalus,
+  darty,
+  angular,
+  java,
+  mysql,
+    egytronics,
+    mindset,
 };

@@ -40,14 +40,14 @@ const ServiceCard = ({ index, title}) => (
   </Tilt>
 );
 
-const TableauIndicateur = () => {
+const LogisticSupportSite = () => {
   return (
     <>
         <NavbarReturn/>
-      <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>Dedalus Healthcare France :</p>
-        <h2 className={styles.sectionHeadText}> Tableaux de bord d'indicateurs pour la surveillance de patients à risque.</h2>
-      </motion.div>
+        <motion.div variants={textVariant()}>
+            <p className={styles.sectionSubText}>Projet Professionnel :</p>
+            <h2 className={styles.sectionHeadText}>Egytronics - Site web de Support de solution logistique.</h2>
+        </motion.div>
 
         <motion.div
             variants={fadeIn("", "", 0.1, 1)}
@@ -55,33 +55,30 @@ const TableauIndicateur = () => {
         >
             <br/><br/>
 
-            Dans le cadre de ce projet d'entreprise, j'ai développé un tableau de bord d'indicateurs visant à améliorer la surveillance des patients à risque en milieu hospitalier. Cet outil a été conçu pour permettre au personnel soignant de suivre efficacement et en temps réel des données critiques, améliorant la réactivité face aux urgences médicales.
+            J'ai conçu, développé et déployé un site web de contact pour le support d'une solution logistique avancée, ciblant les professionnels des secteurs militaire et naval. Conçu pour s'étendre à l'échelle internationale, le site permet des échanges directs et efficaces avec les utilisateurs du monde entier, reflétant un engagement envers une accessibilité et une communication sans frontières.
 
             <br/><br/>
 
-            J'ai mis à profit mes compétences en :
-            <span className={'text-[20px] text-amber-50'}> #Angular </span>,
-            <span className={'text-[20px] text-amber-50'}> #HTML </span>,
-            <span className={'text-[20px] text-amber-50'}> #JAVA </span>, et
+            Pour mener ce projet à bien, j'ai mobilisé mes compétences en :
+            <span className={'text-[20px] text-amber-50'}> #CSS </span> et
+            <span className={'text-[20px] text-amber-50'}> #HTML </span> a été fondamentale pour créer une interface claire et fonctionnelle, tandis que le
             <span className={'text-[20px] text-amber-50'}> #Maquettage Web </span>
-            pour réaliser l'interface utilisateur et le backend de l'application. La stylisation a été effectuée avec
-            <span className={'text-[20px] text-amber-50'}> #CSS </span>, garantissant une expérience utilisateur cohérente et intuitive.
-
+            a aidé à conceptualiser et affiner l'expérience utilisateur.
             <br/><br/>
 
-            Mon travail a également bénéficié de compétences transversales telles que :
-            <span className={'text-[20px] text-amber-50'}> #Agilité </span>,
-            <span className={'text-[20px] text-amber-50'}> #Analyse du besoin client </span>, et
-            <span className={'text-[20px] text-amber-50'}> #Communication </span>,
-            qui ont été essentielles pour adapter l'outil aux exigences spécifiques du milieu hospitalier et pour communiquer efficacement avec les parties prenantes.
+            Ce projet a été l'occasion de renforcer des compétences transversales primordiales telles que :
+            <span className={'text-[20px] text-amber-50'}> #Analyse du besoin client</span>,
+            <span className={'text-[20px] text-amber-50'}> #Communication</span>,
+            <span className={'text-[20px] text-amber-50'}> #Auto-formation</span>, et
+            <span className={'text-[20px] text-amber-50'}> #Conformité Légale</span>,
+            assurant que le projet répond aux exigences de sécurité et de réglementation internationales.
+
         </motion.div>
 
       <p className={styles.sectionSubText2 } >Compétences Techniques :</p>
 
       <div className='mt-6 flex flex-wrap gap-5'>
-        <ServiceCard title={"#Angular"}></ServiceCard>
         <ServiceCard title={"#Maquettage Web"}></ServiceCard>
-        <ServiceCard title={"#JAVA"}></ServiceCard>
         <ServiceCard title={"#HTML"}></ServiceCard>
         <ServiceCard title={"#CSS"}></ServiceCard>
       </div>
@@ -90,14 +87,12 @@ const TableauIndicateur = () => {
 
         <div className='mt-6 flex flex-wrap gap-5'>
             <ServiceCard title={"#Analyse du besoin client"}></ServiceCard>
-            <ServiceCard title={"#Agilité"}></ServiceCard>
             <ServiceCard title={"#Communication"}></ServiceCard>
             <ServiceCard title={"#Auto-formation"}></ServiceCard>
             <ServiceCard title={"#Conformité Légale"}></ServiceCard>
-            <ServiceCard title={"#Analyse du retour sur investissement"}></ServiceCard>
         </div>
     </>
   );
 };
 
-export default SectionWrapper(TableauIndicateur, "tableauIndicateur");
+export default SectionWrapper(LogisticSupportSite , "logisticSupportSite");
