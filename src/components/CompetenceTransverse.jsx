@@ -67,12 +67,12 @@ const ProjectCard = ({
   );
 };
 
-const Works = () => {
+const Technique = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} `}>My work</p>
-        <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
+        <p className={`${styles.sectionSubText} `}>Compétences Techniques</p>
+        <h2 className={`${styles.sectionHeadText}`}>Compétences.</h2>
       </motion.div>
 
       <div className='w-full flex'>
@@ -97,4 +97,4 @@ const Works = () => {
   );
 };
 
-export default SectionWrapper(Works, "");
+export default SectionWrapper(Technique, "technique");
